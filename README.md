@@ -8,3 +8,8 @@ To use the path resolution configuration set on `tsconfig.json`. The package `ts
 ```
 nodemon --exec ts-node -r tsconfig-paths/register index.ts
 ```
+
+## Linting
+---
+#### TS-Eslint
+To read more about TS linting, [here the docs](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin);

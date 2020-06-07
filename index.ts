@@ -1,10 +1,10 @@
 import Hapi from '@hapi/hapi';
-import { ApolloServer, gql } from 'apollo-server-hapi';
+import { ApolloServer } from 'apollo-server-hapi';
 
 import typeDefs from '@/typedefs';
 import { resolvers } from '@/data';
 
-const init = async () => {
+const init = async (): Promise<void> => {
   const server = new ApolloServer({ typeDefs, resolvers })
 
   const app = Hapi.server({
