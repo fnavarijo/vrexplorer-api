@@ -1,0 +1,24 @@
+{
+  "name": "vrexplorer-api",
+  "version": "1.0.0",
+  "description": "Graphql API for VR Explorer APP",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node -r tsconfig-paths/register index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fernando Navarijo",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1",
+    "apollo-server-hapi": "^2.14.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.11",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.5"
+  }
+}
