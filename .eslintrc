@@ -4,6 +4,9 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
+  "env": {
+    "node": true
+  },
   "plugins": [
     "@typescript-eslint"
   ],
@@ -13,6 +16,13 @@
   ],
   "rules": {
     "no-console": ["warn"],
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+    }],
     "array-callback-return": ["error"],
     "@typescript-eslint/array-type": ["error", {
       "default": "generic"
