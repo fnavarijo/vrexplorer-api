@@ -9,7 +9,7 @@ const init = async (): Promise<void> => {
 
   const app = Hapi.server({
     port: 4000,
-    host: 'localhost',
+    host: '0.0.0.0',
   });
 
   // app.route({
@@ -26,7 +26,7 @@ const init = async (): Promise<void> => {
   await server.installSubscriptionHandlers(app.listener);
 
   await app.start();
-  console.log('Server running on uri %s', app.info.uri);
+  console.log('Server running on %s', app.info.uri);
 };
 
 process.on('unhandledRejection', (err) => {
