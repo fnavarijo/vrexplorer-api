@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  api:
+    build:
+      context: ./
+      dockerfile: ./deployment/Dockerfile
+      args:
+        IMAGE_TAG: 12.18.0
+    depends_on:
+      - db
+    command: ["dev"]
+    ports:
+      - "4000:4000"
+    volumes:
+      - type: bind
+        source: ./
+        target: /home/node/app
+
+  db:
+    image: mariadb:10.5.3
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=dev123
+      - MYSQL_DATABASE=vrexplorer
