@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --exec ts-node -r tsconfig-paths/register --files index.ts",
     "lint": "eslint . --ext .js,.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Fernando Navarijo",
   "license": "ISC",
@@ -15,11 +15,14 @@
     "apollo-server-hapi": "^2.14.2"
   },
   "devDependencies": {
+    "@types/jest": "^25.2.3",
     "@types/node": "^14.0.11",
     "@typescript-eslint/eslint-plugin": "^3.1.0",
     "@typescript-eslint/parser": "^3.1.0",
     "eslint": "^7.2.0",
+    "jest": "^26.0.1",
     "nodemon": "^2.0.4",
+    "ts-jest": "^26.1.0",
     "ts-node": "^8.10.2",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.5"
