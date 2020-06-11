@@ -12,7 +12,11 @@
       "@/*": [
         "*"
       ]
-    }
+    },
+    "types": [
+      "@types/node",
+      "@types/hapi"
+    ]
   },
   "lib": ["ES2019"]
 }

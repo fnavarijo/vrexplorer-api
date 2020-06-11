@@ -1,6 +1,7 @@
 import Hapi from '@hapi/hapi';
 import { ApolloServer } from 'apollo-server-hapi';
 
+import { storage } from '@/plugins';
 import typeDefs from '@/typedefs';
 import { resolvers } from '@/data';
 
@@ -24,6 +25,14 @@ const init = async (): Promise<void> => {
   });
 
   await server.installSubscriptionHandlers(app.listener);
+
+  await app.register({
+    plugin: storage,
+    options: {
+      dialect: 'mariadb',
+      connectionURI: 'mariadb://db:3306/vrexplorer?user=root&password=dev123',
+    },
+  });
 
   await app.start();
   console.log('Server running on %s', app.info.uri);
